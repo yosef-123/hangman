@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hangman</title>
+  <style>
+    body{
+      text-align: center;
+      box-sizing: border-box;
+    }
+    #header{
+      font-size:30px;
+      margin-bottom: 1vh;
+    }
+    .img{
+      width:45vh;
+      height:45vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 1px solid black;
+      margin:0 auto;
+    }
+
+    #keyboard{
+      width:fit-content;
+      display:grid;
+      grid-template-columns:auto auto auto auto auto auto auto;
+      position:absolute;
+      left:50%;
+      bottom:1vh;
+      transform:translateX(-50%);
+    }
+    #keyboard > *{
+      width:50px;
+      height:50px;
+      margin:5px;
+      font-size:35px;
+    }
+
+    .clicked{
+      opacity: 0.6;
+    }
+
+    #letters{
+      width:fit-content;
+      height:fit-content;
+      margin:0 auto;
+    }
+    #letters > *{
+      border-bottom: 1px solid black;
+      width:50px;
+      height:50px;
+      font-size:40px;
+      margin-left:7px;
+      float:left;
+    }
+  </style>
+</head>
+<body>
+  <div id='header'>hangman</div>
+  <div class='img empty'></div>
+  <div id='letters'>
+    <!-- this is just place holder for when its auto generated -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div id='keyboard'>
+    <button id='a'>a</button>
+    <button id='b'>b</button>
+    <button id='c'>c</button>
+    <button id='d'>d</button>
+    <button id='e'>e</button>
+    <button id='f'>f</button>
+    <button id='g'>g</button>
+    <button id='h'>h</button>
+    <button id='i'>i</button>
+    <button id='j'>j</button>
+    <button id='k'>k</button>
+    <button id='l'>l</button>
+    <button id='m'>m</button>
+    <button id='n'>n</button>
+    <button id='o'>o</button>
+    <button id='p'>p</button>
+    <button id='q'>q</button>
+    <button id='r'>r</button>
+    <button id='s'>s</button>
+    <button id='t'>t</button>
+    <button id='u'>u</button>
+    <span></span><!-- id css -->
+    <button id='v'>v</button>
+    <button id='w'>w</button>
+    <button id='x'>x</button>
+    <button id='y'>y</button>
+    <button id='z'>z</button>
+  </div>
+  <script type='module' src='hangman.js'></script>
+</body>
+</html>
