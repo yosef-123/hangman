@@ -16,17 +16,12 @@
       margin-bottom: 1vh;
     }
     .img{
-      /* for now */
-      font-size:20px;
-      /**/
-      width:45vh;
-      height:45vh;
+      width:43vh;
+      height:43vh;
       background-repeat: no-repeat;
       background-size: cover;
-      border: 1px solid black;
       margin:0 auto;
     }
-
     #keyboard{
       width:fit-content;
       display:grid;
@@ -85,9 +80,10 @@
 </head>
 <body>
   <div id='header'>hangman</div>
-  <div class='img empty'>
-    lives left : <span id="lives-left">9</span>
-  </div>
+  <div class='img' style='background-image: url("./img/hangpole.png");'></div>
+  
+  lives left : <span id="lives-left">9</span>
+
   <div id='letters'>
     <!-- this is just place holder for when its auto generated -->
     <div></div>

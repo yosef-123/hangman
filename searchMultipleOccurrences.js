@@ -5,11 +5,9 @@ const searchMultipleOccurrences = (string,searchValue)=>{
   while(1){
     var pos = string.indexOf(searchValue,searchPos)
     if(pos == -1){// this will work once you finish checking the string
-      console.log('break')
       break;//leave while loop
     }
     searchPos = pos+1//since you checked the returned position
-    console.log('search pos ',searchPos)
     positions.push(pos)
   }
   if(positions.length == 0){positions.push(-1)}
