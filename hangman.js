@@ -3,7 +3,7 @@ import searchMultipleOccurrences from './searchMultipleOccurrences.js'
 const randomWords = [
   'lion','toad','frog','giraffe','hippopotamus','monkey','dog','cat','mouse','crocodile','zebra','ostrich','lizard',
   'tiger','wolf','hyena','snake','cobra','panther','chicken','rooster','chipmunk','leopard','ant','fly','bear',
-  'goat','sheep','cow','horse','donkey','deer','peacock','bird','bug','gorilla',
+  'goat','sheep','cow','horse','donkey','deer','peacock','bird','bug','gorilla','bat','pig','boar',
 ]
 var lettersAdded = 0
 const livesYouStartWith = 9
@@ -20,6 +20,7 @@ const input = (letter)=>{
     document.getElementById('lives-left').innerText = livesLeft
     if(livesLeft == 0){
       document.getElementById('youLose').style.display = 'block'
+      document.getElementById('loseWord').innerText = word
     }
     return
   }
@@ -32,7 +33,7 @@ const input = (letter)=>{
 
   //check if you guessed all the letters yet
   if(lettersAdded == word.length) {
-    document.getElementById('word').innerText = word
+    document.getElementById('winWord').innerText = word
     document.getElementById('youWin').style.display = 'block'
   }
 }
@@ -42,7 +43,7 @@ const replay = ()=>{
   //reset the game
   document.getElementById('youWin').style.display  = 'none'
   document.getElementById('youLose').style.display = 'none'
-  //add the onclick attribute
+  //enable clicking by removing class = clicked
   document.querySelectorAll('#keyboard > button').forEach((element)=>{
     element.removeAttribute('class')
   })
